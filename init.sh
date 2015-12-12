@@ -6,6 +6,8 @@ if [ -n "$tmp" ]; then
 fi 
 unset tmp
 mkdir $USERDIR
-bash lib/position.sh init $USERDIR
+bash lib/rooms.sh init $USERDIR
+bash lib/rooms.sh visit $USERDIR
+bash lib/rooms.sh doors $USERDIR
 
-cat "$(bash lib/position.sh echo $USERDIR)"/description.txt
+#cat "$(bash lib/position.sh echo $USERDIR)"/description.txt
